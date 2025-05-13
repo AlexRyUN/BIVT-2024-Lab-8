@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab8
+namespace Lab_8
 {
     public class Blue_3 : Blue
     {
@@ -70,7 +70,7 @@ namespace Lab8
             for (int i = 0; i < qwords.Length; i++)
             {
                 bool swopped = false;
-                for (int j = 0; j < qwords.Length-i -1; j++)
+                for (int j = 0; j < qwords.Length-i-1; j++)
                 {
                     if ((qwords[j].Item2 < qwords[j+1].Item2) || ((qwords[j].Item2 == qwords[j + 1].Item2)&& (qwords[j].Item1 > qwords[j+1].Item1)))
                     {
@@ -88,7 +88,7 @@ namespace Lab8
             {
                 _output[i].Item1 = qwords[i].Item1;
                 _output[i].Item2 = (qwords[i].Item2*100) / numberwords;
-                //
+                
             }
         }
         public override string ToString()

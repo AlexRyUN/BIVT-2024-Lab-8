@@ -5,7 +5,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab8
+namespace Lab_8
 {
     public class Blue_4 : Blue
     {

@@ -7,8 +7,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
-namespace Lab8
+namespace Lab_8
 {
     public class Blue_1 : Blue
     {
@@ -29,6 +30,7 @@ namespace Lab8
                 _output = null;
                 return;
             }
+            
             string[] Chtext = Input.Split(' ');
             string[] result = new string[0];  
             string Naborstr = "";
@@ -55,12 +57,11 @@ namespace Lab8
                     nresult[nresult.Length - 1] = Naborstr;
                     result = nresult;
                     Naborstr = "";
-                    
+                    i--;
                 }
                 else
                 {
-                    Naborstr = proba;
-                    
+                    Naborstr = proba;   
                 }
                 i++;
 
