@@ -9,7 +9,19 @@ namespace Lab_8
     public class Blue_3 : Blue
     {
         private (char, double)[] _output;
-        public (char, double)[] Output {  get { return _output; } }
+        public (char, double)[] Output 
+        {  
+            get 
+            {
+                (char, double)[] copyoutput = new (char, double)[_output.Length];
+                for (int i = 0; i < _output.Length; i++)
+                {
+                    copyoutput[i] = _output[i];
+                }
+                return copyoutput;
+            
+            } 
+        }//ВОЗВРАЩАТЬ КОПИЮ
 
         public Blue_3(string text) : base(text)
         {
@@ -94,13 +106,13 @@ namespace Lab_8
         public override string ToString()
         {
             if (_output == null || _output.Length == 0)
-                return "null";
+                return null;
             string[] mstr = new string[_output.Length];
             for (int i = 0; i < _output.Length; i++)
             {
                 mstr[i] = $"{_output[i].Item1} - {_output[i].Item2:F4}";
             }
-            string rstr = string.Join("\n\r", mstr);
+            string rstr = string.Join(Environment.NewLine, mstr);
             return rstr;
         }
     }

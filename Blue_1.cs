@@ -14,7 +14,18 @@ namespace Lab_8
     public class Blue_1 : Blue
     {
         private string[] _output;
-        public string[] Output { get { return _output; } }
+        public string[] Output 
+        { 
+            get 
+            {
+                string[] copyoutput = new string[_output.Length];
+                for (int i = 0; i < _output.Length; i++)
+                {
+                    copyoutput[i] = _output[i];
+                }
+                return copyoutput; 
+            } 
+        }
 
 
         public Blue_1(string text) : base(text)
@@ -31,7 +42,7 @@ namespace Lab_8
                 return;
             }
             
-            string[] Chtext = Input.Split(' ');
+            string[] Chtext = Input.Split('');
             string[] result = new string[0];  
             string Naborstr = "";
             int i = 0;
@@ -85,8 +96,7 @@ namespace Lab_8
             { 
                 return null; 
             }
-            string s = string.Join("\n\r", _output);
-            return s;
+            return string.Join(Environment.NewLine, _output);
         }
     }
 }
