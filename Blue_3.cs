@@ -100,7 +100,7 @@ namespace Lab_8
             {
                 mstr[i] = $"{_output[i].Item1} - {_output[i].Item2:F4}";
             }
-            string rstr = string.Join(Environment.NewLine, mstr);
+            string rstr = string.Join("\n\r", mstr);
             return rstr;
         }
     }

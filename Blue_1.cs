@@ -85,7 +85,8 @@ namespace Lab_8
             { 
                 return null; 
             }
-            return string.Join(Environment.NewLine, _output);
+            string s = string.Join("\n\r", _output);
+            return s;
         }
     }
 }

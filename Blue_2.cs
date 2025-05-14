@@ -12,7 +12,6 @@ namespace Lab_8
         private string _output;
         private string _lettercomb;
         public string Output { get { return _output; } }
-        public string Lettercomb { get { return _lettercomb; } }
         public Blue_2(string text, string lettercomb) : base(text)
         {
             _lettercomb = lettercomb;
