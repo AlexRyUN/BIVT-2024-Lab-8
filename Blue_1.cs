@@ -18,6 +18,10 @@ namespace Lab_8
         { 
             get 
             {
+                if (_output == null)
+                {
+                    return null;
+                }
                 string[] copyoutput = new string[_output.Length];
                 for (int i = 0; i < _output.Length; i++)
                 {
@@ -42,7 +46,7 @@ namespace Lab_8
                 return;
             }
             
-            string[] Chtext = Input.Split('');
+            string[] Chtext = Input.Split(' ');
             string[] result = new string[0];  
             string Naborstr = "";
             int i = 0;
